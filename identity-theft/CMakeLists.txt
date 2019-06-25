@@ -2,9 +2,11 @@ cmake_minimum_required(VERSION 3.8.0)
 
 project( IdentityTheftProject )
 
-add_definitions(
-    -D IDENTITY_THEFT_DLL
-)
+if( WIN32 )
+    add_definitions(
+        -D IDENTITY_THEFT_DLL
+    )
+endif()
 
 add_executable( identityTheft
     thief.cpp 
