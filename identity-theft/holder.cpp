@@ -1,6 +1,8 @@
-#include<iostream>
+#include <iostream>
+#include "dummy.h"
 
-void dummy(){} // here just so the library will be loaded
+void dummy()  // here just so the library will be loaded
+{}
 
 struct secret_holder
 {

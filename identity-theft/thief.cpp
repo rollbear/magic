@@ -1,7 +1,6 @@
-extern void dummy();
-int main() { dummy(); }
+#include <iostream>
+#include "dummy.h"
 
-#include<iostream>
 struct thief
 {
     thief()
@@ -34,3 +33,7 @@ struct thief
 // violates it is undefined." --https://en.cppreference.com/w/cpp/language/definition 
 thief joe_bloggs; 
 
+int main() 
+{ 
+    dummy(); 
+}
