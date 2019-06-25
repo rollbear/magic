@@ -16,6 +16,17 @@ add_library( holder SHARED
     holder.cpp
 )
 
+option(ASAN "build with ASAN" OFF)
+if (ASAN)
+  # Run built binary with
+  #
+  #     ASAN_OPTIONS=detect_odr_violation=2,use_odr_indicator=true
+  #
+  # to see ODR violation
+  target_link_options(holder PUBLIC -fsanitize=address)
+  target_compile_options(holder PUBLIC -fsanitize=address)
+endif()
+
 target_link_libraries( identityTheft
     holder
 )
