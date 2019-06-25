@@ -25,4 +25,12 @@ struct thief
     float other_random_stuff;
 };
 
-thief joe_bloggs;
+// Invoke some undefined behavior by violating the one-definition rule -- this symbol is also defined
+// in the other part of the program.
+//
+// "One and only one definition of every non-inline function or variable that is odr-used (see below) 
+// is required to appear in the entire program (including any standard and user-defined libraries). 
+// The compiler is not required to diagnose this violation, but the behavior of the program that 
+// violates it is undefined." --https://en.cppreference.com/w/cpp/language/definition 
+thief joe_bloggs; 
+
