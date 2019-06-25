@@ -19,3 +19,4 @@ target_link_libraries( identityTheft
 )
 
 set_property( TARGET identityTheft PROPERTY CXX_STANDARD 17 )
+set_property( TARGET holder        PROPERTY CXX_STANDARD 17 )

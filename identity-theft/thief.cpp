@@ -1,7 +1,6 @@
-extern void dummy();
-int main() { dummy(); }
+#include <iostream>
+#include "dummy.h"
 
-#include<iostream>
 struct thief
 {
     thief()
@@ -26,3 +25,8 @@ struct thief
 };
 
 thief joe_bloggs;
+
+int main() 
+{ 
+    dummy(); 
+}
